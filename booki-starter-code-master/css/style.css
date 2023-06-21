@@ -16,7 +16,6 @@ nav a {padding: 2em;
 border-top: 3px solid transparent;}
 
 nav a:hover {border-top: #0065FC;
-    border-bottom: none;
     color: #0065FC;
 }
 
@@ -35,6 +34,116 @@ color: #0065FC;}
     }
 }
 
+.search-form {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.search-form > * {
+    padding: 1em 1.5em;
+    font-size: 1.2em;
+}
+
+.search-form i {
+    background-color: lightgrey;
+    border-radius: 1em 0 0 1em;
+}
+
+.search-form input {
+    flex-basis: 16em;
+    border: 1px solid lightgrey;
+    overflow: auto;
+}
+
+.search-form::input-placeholder {
+    font-size: 1.2em;
+}
+
+.search-form button {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 1em 1em 0;
+    border: none;
+    cursor:pointer;
+    opacity:0.9;
+    transition: transform 200ms;
+}
+
+.search-form button:hover {
+    opacity:1;
+    transform:scale(1.03);
+}
+
+.fa-solid.fa-magnifying-glass {
+    display: inline;
+    background-color: #0065FC;
+}
+
+@media(max-width: 800px) {
+    .search-form .search-text{
+        display: none;
+    }
+}
+
+.filter-list {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.filter-list h1 {
+}
+
+.filter .fa-solid {
+    color: #0065FC;
+    background-color: #deebff;
+    border-radius: 50%;
+    margin : -2px;
+    width: 3em;
+    height : 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter {
+    border: 2px solid lightgrey;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    transition : all 100ms;
+}
+
+.filter span {
+    font-weight: bold;
+    padding: 0 1em;
+}
+
+.filter:hover {
+    background-color: #f3f8ff;
+    transform: scale(1.02)
+}
+
+.results-message {
+    display: flex;
+    align-items: center;
+    gap:1em
+}
+
+.results-message .fa-solid {
+    color: #0065FC;
+    width : 2em;
+    height:2em;
+    border : 1px solid darkgrey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em
+}
 
 
 #logo {margin-right: auto;
