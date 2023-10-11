@@ -42,15 +42,18 @@ nav a {
 display: flex;
 background-size: auto;
 width: 100%;
+text-align: center;
+justify-content: center;
 }
 
 
 
 .subnav a {
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 20%;
     text-align: center;
     background-size: auto;
+    justify-content: center;
     width: 100%;
 
 }
@@ -135,21 +138,32 @@ width: 100%;
     background-color: #0065FC;
 }
 
-h1{ padding: 0;
-    margin: 0;
-    gap: 0;
-    
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+}
+
+h1{ display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+ 
 }
 
 
 
 .filter-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1em;
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 1em;
 }
 
 .filter .fa-solid {
@@ -463,14 +477,14 @@ footer>* {
         padding: 20px;
     }
 
-    .h1 {
-        order: 1;
-    
-        padding-right: 5em;
-        margin-right: 5em;
-        gap: 7em;
-        color: #0065FC;
 
+    h1{     display: block;
+    }
+
+    .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
     }
 
     h3 {
@@ -620,6 +634,10 @@ footer>* {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
+    h1{  
+   
+    }
+
     h3 {
         padding-left: 1em;
     }
@@ -684,12 +702,24 @@ footer>* {
         padding-right: 0;
     }
 
+    .flex {
+        display: block;
+      
+   
+    }
+
     .filter-list {
         display: grid;
         align-items: center;
-        gap: 2em;
+        gap: 1em;
         grid-template-columns: repeat(2, 0.5fr);
         padding-top: 1em;
+    }
+
+    .filter{
+        display: flex;
+        flex-wrap: wrap;
+        
     }
 
     .hebergements-and-populaires section.hebergements {
